@@ -1,0 +1,75 @@
+:root {
+  --animate-time: 1.5s;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background: green;
+}
+.deck {
+  transform-style: preserve-3d;
+  position: absolute;
+  left: calc(50% - 100px);
+  top: 25px;
+}
+.card {
+  display: inline-block;
+  width: 200px;
+  height: 290px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  transition: transform var(--animate-time);
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform-origin: center 150%;
+  > img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform var(--animate-time);
+  }
+}
+.card-face {
+  transform: rotateY(.5turn) translateZ(2px);
+}
+.card-back {
+  transform: rotateY(.5turn) translateZ(-2px);
+}
+
+body:hover img {
+  transform: rotateY(0);
+}
+
+//==== Specific Cards ====
+
+$numcards: 13;
+$ystep: -20grad/(($numcards - 1) / 2);
+$zstep: 50grad/(($numcards - 1) / 2);
+$vertstep: 25px;
+
+@mixin flourish($className, $n) {
+  #{$className} {
+    --n: #{$n};
+    transform: translateZ(-$vertstep * $n);
+  }
+  body:hover #{$className} {
+    transform:
+      translateZ($vertstep * $n)
+      rotateY($ystep * $n)
+      rotateZ($zstep * $n);
+  }
+}
+
+$cards: ('.ace', '.two', '.three', '.four', '.five', '.six', '.seven', '.eight', '.nine', '.ten', '.jack', '.queen', '.king');
+
+@each $card in $cards {
+    $i: index($cards, $card) - ($numcards + 1) / 2;
+    @include flourish($card, $i);
+}

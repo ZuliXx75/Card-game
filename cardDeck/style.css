@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    text-align: center;
+    background: #fc84fc;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controls {
+    margin: 20px;
+}
+
+select, button {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+}
+
+.deck {
+    position: relative;
+    width: 100%;
+    height: 300px;   /*  space under floating cards */
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    perspective: 1200px;
+}
+
+/* base card */
+.card {
+    width: 140px;
+    height: 210px;
+    position: absolute;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* images */
+.card img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 12px;
+}
+
+/* flip */
+.front {
+    transform: rotateY(180deg);
+}
+
+.card.flipped {
+    transform: rotateY(180deg) !important;
+}
+
+/* SPREAD (13 CARDS) */
+.deck:hover .card:nth-child(1)  { transform: translateX(-360px) rotate(-25deg); }
+.deck:hover .card:nth-child(2)  { transform: translateX(-300px) rotate(-22deg); }
+.deck:hover .card:nth-child(3)  { transform: translateX(-240px) rotate(-18deg); }
+.deck:hover .card:nth-child(4)  { transform: translateX(-180px) rotate(-14deg); }
+.deck:hover .card:nth-child(5)  { transform: translateX(-120px) rotate(-10deg); }
+.deck:hover .card:nth-child(6)  { transform: translateX(-60px)  rotate(-6deg); }
+.deck:hover .card:nth-child(7)  { transform: translateX(0px)     rotate(0deg); }
+.deck:hover .card:nth-child(8)  { transform: translateX(60px)   rotate(6deg); }
+.deck:hover .card:nth-child(9)  { transform: translateX(120px)  rotate(10deg); }
+.deck:hover .card:nth-child(10) { transform: translateX(180px)  rotate(14deg); }
+.deck:hover .card:nth-child(11) { transform: translateX(240px)  rotate(18deg); }
+.deck:hover .card:nth-child(12) { transform: translateX(300px)  rotate(22deg); }
+.deck:hover .card:nth-child(13) { transform: translateX(360px)  rotate(25deg); }
+
+#result {
+    margin-top: 60px;
+    font-size: 22px;
+    position: relative;
+    z-index: 10;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}

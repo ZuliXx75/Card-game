@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Guess the Card</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1> Guess the Card Game</h1>
+
+    <p>Pick a card from the dropdown, then click a card</p>
+
+    <div class="controls">
+
+        <select id="guess">
+            <option value="">-- Choose a card --</option>
+            <option value="Ace of Spades">Ace of Spades</option>
+            <option value="Two of Spades">Two of Spades</option>
+            <option value="Three of Spades">Three of Spades</option>
+            <option value="Four of Spades">Four of Spades</option>
+            <option value="Five of Spades">Five of Spades</option>
+            <option value="Six of Spades">Six of Spades</option>
+            <option value="Seven of Spades">Seven of Spades</option>
+            <option value="Eight of Spades">Eight of Spades</option>
+            <option value="Nine of Spades">Nine of Spades</option>
+            <option value="Ten of Spades">Ten of Spades</option>
+            <option value="Jack of Spades">Jack of Spades</option>
+            <option value="King of Spades">King of Spades</option>
+            <option value="Queen of Spades">Queen of Spades</option>
+        </select>
+
+        <button id="reset">Restart</button>
+
+    </div>
+
+    <div class="deck">
+
+    <div class="card" data-name="Two of spades">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Card_back_06.svg" class="back">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/2S.svg" class="front">
+    </div>
+
+  <div class="card" data-name="Three of spades">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Card_back_06.svg" class="back">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/3S.svg" class="front">
+  </div>
+
+  <div class="card" data-name="Four of spades">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Card_back_06.svg" class="back">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/4S.svg"  class="front">
+  </div>
+
+  <div class="card" data-name="Five of spades" >
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Card_back_06.svg" class="back">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/5S.svg"  class="front">
+  </div>
+
+  <div class="card" data-name="Six of spades">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Card_back_06.svg" class="back">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/6S.svg" class="front">
+  </div>
+
+  <div class="card" data-name= "Seven of spades">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Card_back_06.svg" class="back">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/7S.svg" class="front">
+  </div>
+
+  <div class="card" data-name="Eight of spades">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Card_back_06.svg" class="back">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/8S.svg" class="front">
+  </div>
+
+  <div class="card" data-name="Nine of spades ">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Card_back_06.svg" class="back">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/9S.svg" class="front">
+  </div>
+
+  <div class="card" data-name="Ten of spades">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Card_back_06.svg" class="back">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/16/10S.svg"  class="front">
+  </div>
+
+  <div class="card" data-name="Jack of spades"> 
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Card_back_06.svg" class="back">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/JS.svg" class="front">
+  </div>
+
+        <div class="card" data-name="Ace of Spades">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Card_back_06.svg" class="back">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/AS.svg" class="front">
+        </div>
+
+        <div class="card" data-name="King of Spades">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Card_back_06.svg" class="back">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/KS.svg" class="front">
+        </div>
+
+        <div class="card" data-name="Queen of Spades">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Card_back_06.svg" class="back">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/QS.svg" class="front">
+        </div>
+
+    </div>
+
+
+
+    <h2 id="result">Make your guess...</h2>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
